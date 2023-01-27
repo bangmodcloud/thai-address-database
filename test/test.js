@@ -6,6 +6,8 @@ let it = mocha.it
 let expect = require('chai').expect
 let db = require('../src')
 
+// rewrite test for check current feature
+
 describe('More then 1 zipcode District', function () {
   it('District ปราณบุรี have 2 result', function () {
     let result = db.searchAddressByDistrict('ปราณบุรี')
