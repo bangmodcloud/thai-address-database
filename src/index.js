@@ -30,7 +30,7 @@ const preprocess = function (data) {
     if (typeof text === 'number') {
       text = lookup[text]
     }
-    return text.replace(/[A-Z]/ig, repl)
+    return text.replace(/[ก-ฮ]/ig, repl)
   }
 
   if (!data[0].length) {
