@@ -44,17 +44,16 @@ Object.keys(words).sort((a, b) => {
   }
   return -1
 })
-.filter((word, i) => i < 52)
+.filter((word, i) => i < 46)
 .forEach((word, i) => {
-  console.log(String.fromCharCode(1680))
-  newWords[String.fromCharCode(i<44 ? 3585+i: 3585+i-44)] = word
+  newWords[String.fromCharCode(3585+i)] = word
 })
 
 //console.log('most freq word=', Object.keys(newWords).map(idx => [newWords[idx], words[newWords[idx]]]))
 fs.writeFileSync('./database/migrate/words.txt', 
   '|คำ|จำนวนครั้ง|\n' +
   '|---|---:|\n' +
-  Object.keys(newWords).map(idx => '|' + newWords[idx] + '|' + words[newWords[idx]] + '|').join('\n')
+  Object.keys(newWords).map(idx => '|' + newWords[idx] + '|' + words[newWords[idx]] + '|' + idx +'|').join('\n')
 )
 
 // process dict keep only 2 or more occurences
