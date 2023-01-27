@@ -1,13 +1,13 @@
 |คำ|จำนวนครั้ง|
 |---|---:|
-| |8600|
-|Nong|639|
-|Ban|497|
-|Na|399|
-|Bang|367|
-|Tha|319|
-|Mueang|238|
-|Wang|229|
+|Daeng|71|
+|Kut|70|
+|Ngam|67|
+|Muang|67|
+|Hin|66|
+|Nuea|64|
+|Ta|62|
+|Lam|61|
 |Mae|186|
 |Si|184|
 |Thong|184|
@@ -44,11 +44,3 @@
 |Chan|78|
 |Sam|78|
 |Phai|78|
-|Daeng|71|
-|Kut|70|
-|Ngam|67|
-|Muang|67|
-|Hin|66|
-|Nuea|64|
-|Ta|62|
-|Lam|61|

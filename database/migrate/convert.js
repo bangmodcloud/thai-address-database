@@ -46,7 +46,8 @@ Object.keys(words).sort((a, b) => {
 })
 .filter((word, i) => i < 52)
 .forEach((word, i) => {
-  newWords[String.fromCharCode(i < 26 ? 65 + i : 97 + i - 26)] = word
+  console.log(String.fromCharCode(1680))
+  newWords[String.fromCharCode(i<44 ? 3585+i: 3585+i-44)] = word
 })
 
 //console.log('most freq word=', Object.keys(newWords).map(idx => [newWords[idx], words[newWords[idx]]]))
