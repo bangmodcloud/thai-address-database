@@ -25,20 +25,20 @@ let resultTree = tree.map((item) => {
             })]
           }
         }).filter(dis => dis).sort(((a, b) => {
-          if(a[0] < b[0]) return -1;
-          if(a[0] > b[0]) return 1;
+          if (a[0] < b[0]) return -1;
+          if (a[0] > b[0]) return 1;
           return 0;
         }))]
       }
     }).filter(amp => amp).sort(((a, b) => {
-      if(a[0] < b[0]) return -1;
-      if(a[0] > b[0]) return 1;
+      if (a[0] < b[0]) return -1;
+      if (a[0] > b[0]) return 1;
       return 0;
     }))]
   }
 }).filter(item => item).sort(((a, b) => {
-  if(a[0] < b[0]) return -1;
-  if(a[0] > b[0]) return 1;
+  if (a[0] < b[0]) return -1;
+  if (a[0] > b[0]) return 1;
   return 0;
 }))
 
