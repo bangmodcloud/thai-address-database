@@ -22,7 +22,7 @@ const preprocess = function (data) {
   t = function (text) {
     function repl (m) {
       let ch = m.charCodeAt(0)
-      return words[ch < 97 ? ch - 65 : 26 + ch - 97]
+      return words[ch-3585]
     }
     if (!useLookup) {
       return text
