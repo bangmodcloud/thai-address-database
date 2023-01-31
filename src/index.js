@@ -4,6 +4,9 @@ const utilAddress = require('./util/splitAddress')
 /**
  * From jquery.Thailand.js line 38 - 100
  */
+
+let provinceSet = new Set()
+
 const preprocess = function (data) {
   let lookup = []
   let words = []
@@ -37,6 +40,7 @@ const preprocess = function (data) {
     // non-compacted database
     return data
   }
+
   // decompacted database in hierarchical form of:
   // [["province",[["amphur",[["district",["zip"...]]...]]...]]...]
   data.map(function (provinces) {
@@ -44,7 +48,6 @@ const preprocess = function (data) {
     if (provinces.length === 3) { // geographic database
       i = 2
     }
-
     provinces[i].map(function (amphoes) {
       amphoes[i].map(function (districts) {
         districts[i] = districts[i] instanceof Array ? districts[i] : [districts[i]]
@@ -55,6 +58,7 @@ const preprocess = function (data) {
             province: t(provinces[0]),
             zipcode: zipcode
           }
+          provinceSet.add(entry.province)
           if (i === 2) { // geographic database
             entry.district_code = districts[1] || false
             entry.amphoe_code = amphoes[1] || false
@@ -69,6 +73,7 @@ const preprocess = function (data) {
 }
 
 const db = preprocess(require('../database/db.json'))
+
 
 const resolveResultbyField = (type, searchStr, maxResult) => {
   searchStr = searchStr.toString().trim()
@@ -89,6 +94,13 @@ const resolveResultbyField = (type, searchStr, maxResult) => {
   }
   return possibles
 }
+
+// Query All
+const allProvince = () => {
+  return Array.from(provinceSet)
+}
+
+// Search Address
 
 const searchAddressByDistrict = (searchStr, maxResult) => {
   return resolveResultbyField('district', searchStr, maxResult)
@@ -125,6 +137,9 @@ const splitAddress = (fullAddress) => {
   return null
 }
 
+
+exports.allProvince = allProvince
+
 exports.searchAddressByDistrict = searchAddressByDistrict
 exports.searchAddressByAmphoe = searchAddressByAmphoe
 exports.searchAddressByProvince = searchAddressByProvince
@@ -135,6 +150,7 @@ if (angular) {
   angular.module('thAddress', [])
     .config(function($provide) {
       $provide.value('thad', {
+        allProvince: allProvince,
         searchAddressByDistrict: searchAddressByDistrict,
         searchAddressByAmphoe: searchAddressByAmphoe,
         searchAddressByProvince: searchAddressByProvince,
