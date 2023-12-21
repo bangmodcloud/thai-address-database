@@ -25,10 +25,7 @@ const preprocess = function (data) {
   t = function (text) {
     function repl (m) {
       let ch = m.charCodeAt(0)
-      // ENG Version
-      // return words[ch-3585]
-      // TH Version
-      return words[ch < 97 ? ch - 65 : 26 + ch - 97]
+      return words[ch-3585]
     }
     if (!useLookup) {
       return text
@@ -36,10 +33,7 @@ const preprocess = function (data) {
     if (typeof text === 'number') {
       text = lookup[text]
     }
-    // ENG Version
-    // return text.replace(/[ก-ฮ]/ig, repl)
-    // TH Version
-    return text.replace(/[A-Z]/ig, repl);
+    return text.replace(/[ก-ฮ]/ig, repl)
   }
 
   if (!data[0].length) {
