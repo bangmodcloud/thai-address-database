@@ -4,7 +4,7 @@ thai-address-database (ENG Version)
 โดยแก้ไขจากเดิมที่สามารถใช้ได้แค่ภาษาไทย ให้สามารถใช้ได้ในภาษาอังกฤษ 
 โดยยังคง Concept Tree structure ของ https://github.com/earthchie/jquery.Thailand.js
 
-- [x] แก้ไข Logic ของการ set new words จากภาษาไทย เป็นภาษาอังกฤษ
+- [ ] แก้ไข Logic ของการ set new words จากภาษาไทย เป็นภาษาอังกฤษ
 - [ ] implement ให้สามารถใช้ได้ทั้ง DB ภาษาไทย และภาษาอังกฤษ 
 - [ ] เพิ่ม function searhc all สำหรับ province district amphoe zipcode
 - [ ] rewording สำหรับคำว่า district และ subdistrict ให้ชัดเจนมากขึ้นเพื่อลดความก้ำกึ่งในการแปลภาษา
