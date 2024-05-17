@@ -12,6 +12,6 @@ thai-address-database (TH Version)
 
 ** ต้องการ update db ให้แก้ไขไฟล์ชื่อ database ใน /database/raw_database และ run `npm run migrate` **
 
-_ณ ตอนนี้ยังใช้ได้แค่ข้อมูลภาษาอังกฤษเท่านั้น_
+_ณ ตอนนี้ยังใช้ได้แค่ข้อมูลภาษาไทยเท่านั้น_
 
 database format as .xlsx ดูจาก raw_database/database.xlsx
