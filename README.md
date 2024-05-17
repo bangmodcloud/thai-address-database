@@ -1,4 +1,4 @@
-thai-address-database (ENG Version)
+thai-address-database (TH Version)
 
 ใน Repository นี้ เป็นการแก้ไข Logic สำหรับการทำ Autocomplete ที่อยู่ประเทศไทย
 โดยแก้ไขจากเดิมที่สามารถใช้ได้แค่ภาษาไทย ให้สามารถใช้ได้ในภาษาอังกฤษ 
